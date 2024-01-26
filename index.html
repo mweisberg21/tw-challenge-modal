@@ -1,95 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>video Pricing Modal</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Product Modal</title>
-  </head>
-  <body>
-    <!-- Global Container -->
+</head>
+
+<body>
+    <!--Global Container-->
     <div class="flex items-center justify-center min-h-screen bg-slate-100">
-      <!-- Card Container -->
-      <div
-        class="flex flex-col p-6 m-3 space-y-10 bg-white rounded-2xl shadow-2xl md:flex-row md:space-y-0 md:space-x-10 md:m-0 md:p-16"
-      >
-        <!-- Image Div -->
-        <div>
-          <img
-            src="images/headphone.png"
-            alt=""
-            class="mx-auto duration-200 w-60 hover:scale-105"
-          />
-        </div>
+        <!--Card container-->
+        <div
+            class="relative flex flex-col p-6 m-3 space-y-10 bg-white rounded-2xl shadow-2xl md:flex-row md:space-y-0 md:space-x-10 md:m-0 md:p-16">
 
-        <!-- Content -->
-        <div class="flex flex-col space-y-6">
-          <!-- Label & Title Container -->
-          <div class="flex flex-col mb-4 space-y-3 text-center md:text-left">
+            <!-- Close Modal Button  -->
+            <button class="absolute top-0 right-0 mt-2 mr-2 text-black bg-transparent hover:text-gray-600">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                    class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+
+            <!-- Video Image Div -->
             <div>
-              <div
-                class="inline-block px-3 py-1 text-sm text-white bg-black rounded-full"
-              >
-                Free Shipping
-              </div>
-            </div>
-
-            <!-- Title -->
-            <div class="max-w-sm text-2xl font-medium">
-              Razer Kraken Kitty Edt Gaming Headset Quartz
-            </div>
-            <!-- Price Container -->
-            <div class="flex flex-col mb-4 space-y-3 text-center md:text-left">
-              <p class="line-through">$799</p>
-              <p class="text-5xl font-bold">$599</p>
-              <p class="text-sm font-light text-gray-400">
-                This offer is valid until April 3rd or as long as stock lasts!
-              </p>
-            </div>
-
-            <!-- Button Group -->
-            <div class="group">
-              <button
-                class="w-full transition-all duration-150 bg-blue-700 text-white border-b-8 border-b-blue-700 rounded-lg group-hover:border-t-8 group-hover:border-b-0 group-hover:bg-blue-700 group-hover:border-t-blue-700 group-hover:shadow-lg"
-              >
-                <div
-                  class="px-8 py-4 duration-150 bg-blue-500 rounded-lg group-hover:bg-blue-700"
-                >
-                  Add to cart
+                <!-- Video Image Div with Play Button Overlay -->
+                <div class="relative">
+                    <img src="./assets/summer-fitness-challenge.1690386238.png" alt="headphones"
+                        class=" w-full md:w-80 rounded-2xl" />
+                    <!-- Play Button Overlay -->
+                    <button
+                        class="hover:scale-125 duration-200 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white bg-opacity-75 rounded-full p-2 shadow-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 20" fill="currentColor"
+                            class="w-12 h-12 text-black">
+                            <path d="M4.18 14.356L14.18 10 4.18 5.644v8.712zM2 4v12l12-6L2 4z" />
+                        </svg>
+                    </button>
                 </div>
-              </button>
+
+
+                <!-- SVG and Text Container for mobile -->
+                <div class="items-center justify-center mt-3 flex md:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16"
+                        class="badge-item collection-icon" height="16" width="16">
+                        <path fill="currentColor"
+                            d="M4.4 2.5a.6.6 0 01.6-.6h6a.6.6 0 110 1.2H5a.6.6 0 01-.6-.6zM2.9 4.5a.6.6 0 01.6-.6h9a.6.6 0 110 1.2h-9a.6.6 0 01-.6-.6z">
+                        </path>
+                        <path fill="currentColor" fill-rule="evenodd"
+                            d="M2 6.5a.5.5 0 01.5-.5h11a.5.5 0 01.5.5V12a2 2 0 01-2 2H4a2 2 0 01-2-2V6.5zm4.5 1.824a.2.2 0 01.29-.18l3.352 1.677a.2.2 0 010 .358L6.79 11.855a.2.2 0 01-.289-.178V8.324z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                    <span class="ml-2 text-sm font-bold">Over 30 Videos In This Challenge</span>
+                </div>
+
+
+                
+                <!--Included Videos Desktop-->
+                <div class="flex-col mt-3 border-t border-gray-300  hidden md:flex">
+                    <div class="items-center mt-3 flex font-bold uppercase text-red-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16"
+                            class="badge-item collection-icon" height="16" width="16">
+                            <path fill="currentColor"
+                                d="M4.4 2.5a.6.6 0 01.6-.6h6a.6.6 0 110 1.2H5a.6.6 0 01-.6-.6zM2.9 4.5a.6.6 0 01.6-.6h9a.6.6 0 110 1.2h-9a.6.6 0 01-.6-.6z">
+                            </path>
+                            <path fill="currentColor" fill-rule="evenodd"
+                                d="M2 6.5a.5.5 0 01.5-.5h11a.5.5 0 01.5.5V12a2 2 0 01-2 2H4a2 2 0 01-2-2V6.5zm4.5 1.824a.2.2 0 01.29-.18l3.352 1.677a.2.2 0 010 .358L6.79 11.855a.2.2 0 01-.289-.178V8.324z"
+                                clip-rule="evenodd"></path>
+                        </svg> <span class="ml-1"></span>PREVIEW THIS CHALLENGE</span></div>
+
+                    <!--sample video thumbnail 1-->
+                    <div class="mt-2 flex flex-row ">
+                        <img src="./assets/f1af72e8-5e6b-45fc-86fd-878d06ea8efa-getty-1462488269.jpg" alt="biceps"
+                            class=" w-32 h-full rounded" /> 
+                              <!--Container for Title and Description-->
+                            <div class="w-48 flex flex-col">
+                            <!--sample video Title-->
+                            <p class="font-bold ml-2">Bicep Burn</p>
+                            <!--sample video description-->
+                            <p class="ml-2 text-sm">Burn those biceps this summer! <a href="#" class="font-bold">Learn More &rarr;</a> </p></div>
+                        </div>
+                        <div class="mt-2 flex flex-row ">
+                            <img src="./assets/images.jpg" alt="biceps"
+                                class=" w-32 h-full rounded" /> 
+                                  <!--Container for Title and Description-->
+                                <div class="w-48 flex flex-col">
+                                <!--sample video Title-->
+                                <p class="font-bold ml-2">Pushup Paradise</p>
+                                <!--sample video description-->
+                                <p class="ml-2 text-sm">Master the art of the Pushup! <a href="#" class="font-bold">Learn More &rarr;</a></p></div>
+                            </div>
+                </div>
             </div>
 
-            <!-- Stock -->
-            <div class="flex items-center space-x-3 group">
-              <div
-                class="w-3 h-3 bg-green-400 rounded-full group-hover:animate-ping"
-              ></div>
-              <div class="text-sm">50+ pcs. in stock</div>
-            </div>
+            <!--Video Content-->
+            <div class="flex flex-col space-y-6">
+                <!--Label Badge & Description-->
+                <div class="flex flex-col mb-b space-y-3 text-center md:text-left">
+                    <div>
+                        <div
+                            class="inline-block px-3 py-1 text-sm text-white hover:text-black hover:bg-green-300 bg-green-500 font-bold rounded-full">
+                            Fitness</div>
+                        <div
+                            class="inline-block px-3 py-1 text-sm text-white hover:text-black hover:bg-cyan-300 bg-cyan-500 font-bold rounded-full">
+                            Challenges</div>
+                        <div
+                            class="inline-block px-3 py-1 text-sm text-white hover:text-black hover:bg-red-400 bg-red-500 font-bold rounded-full">
+                            On
+                            Sale!</div>
 
-            <!-- Bottom Buttons Container -->
-            <div
-              class="flex flex-col space-y-4 md:space-y-0 md:space-x-4 md:flex-row"
-            >
-              <button
-                class="flex items-center justify-center py-3 px-5 space-x-3 border-2 border-gray-300 rounded-lg shadow-sm hover:bg-opacity-30 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-150"
-              >
-                <img src="images/weight.png" alt="" class="w-8" />
-                <span>Add to cart</span>
-              </button>
+                    </div>
+                </div>
+                <!--Video Title-->
+                <div class="max-w-sm text-2xl font-bold text-center md:text-left">
+                    Summer Fitness Challenge
+                </div>
 
-              <button
-                class="flex items-center justify-center py-3 px-5 space-x-3 border-2 border-gray-300 rounded-lg shadow-sm hover:bg-opacity-30 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-150"
-              >
-                <img src="images/heart.png" alt="" class="w-8" />
-                <span>Add to wishlist</span>
-              </button>
+                <!--Challenge Dates-->
+                <div class="max-w-sm text-center md:text-left">
+                    <p class="-mt-5 font-light text-sm text-gray-500"> June 1st, 2024 - August 31, 2024</p>
+                </div>
+
+                <!--Description-->
+                <div class="max-w-sm text-center md:text-left">
+                    <p class="text-sm">Get fit this summer! Join our membership and get access to our summer fitness
+                        challenge! Or you can purchase challenge only access! <span class="font-bold">This is your
+                            summer!</span> Make the most of it!</p>
+                </div>
+
+                <!--Price Container-->
+                <div class="flex flex-col mb-4 space-y-3 text-center md:text-left">
+                    <p class="font-bold text-xl">Included In Membership <span class="text-gray-500 text-sm">OR</span>
+                        <span class="line-through text-lg">$29.99</span> <span class="text-2xl font-bold">$12.99</span>
+                    </p>
+                    <p class="text-sm font-light text-gray-400">Sale Ends in <span class="font-bold">1d 12h 12m</span>
+                    </p>
+                </div>
+                <!--button group-->
+                <div class="group">
+                    <button class="md:flex-grow bg-red-600 text-white p-3 rounded-lg hover:bg-red-400 duration-200">
+                        <div class="px-8 font-bold">Become a Member</div>
+                    </button>
+                    <button
+                        class="bg-gray-300 text-black p-3 md:flex-grow rounded-lg hover:bg-gray-400 hover:text-white mt-1 duration-200">
+                        <div class="px-8  font-light">Buy $12.99</div>
+                    </button>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
     </div>
-  </body>
+</body>
+
 </html>
